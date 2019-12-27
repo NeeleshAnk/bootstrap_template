@@ -1,0 +1,118 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "color";
+@import "mixins";
+@import "typography";
+@import "variable";
+body{
+    overflow-x: hidden;
+}
+.navbar-brand{
+    color: $golden-yellow !important;
+    font-family: Kaushan;
+    @include media-breakpoint-up(lg){
+        font-size: rem(28);
+    }
+}
+
+#mainnav{
+    background-color: #212529;
+    @include media-breakpoint-up(lg) {
+        transition: padding-top .3s,padding-bottom .3s;
+        padding-top: rem(25);
+        padding-bottom: rem(25);
+        border: none;
+        background-color: transparent;
+
+    }
+}
+.navbar-shrink {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background-color: #212529 !important;
+    .navbar-brand{
+        font-size: rem(20);
+    }
+}
+.navbar-toggler{
+    background-color: $golden-yellow;
+    color: $white !important;
+    font-size: rem(12);
+    padding: rem(13);
+    font-size: 12px;
+    font-family: montserrat_regular;
+    text-transform: uppercase;
+    border: 0;
+    .navbar-toggler-icon{
+        width: rem(10);
+        height: rem(12);
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 0h24M4 12h24M4 24h24'/%3E%3C/svg%3E");
+    }
+}
+.nav-link{
+    color: $white !important;
+    font-family: montserrat_regular;
+    letter-spacing: 1px;
+    font-size: 90%;
+    &:hover {
+        color: $golden-yellow !important;
+    }
+    @media (min-width: 992px){
+    padding: 1.1em 1em !important;
+}
+}
+.intro-text {
+    padding-top: rem(150);
+    padding-bottom: rem(100);
+}
+.masthead {
+    text-align: center;
+    color: $white;
+    @include global-bg-image('header-bg.jpg', center, cover);
+    .intro-text {
+        @include media-breakpoint-up(md){
+            padding-top: rem(300);
+            padding-bottom: rem(200);
+        }
+    }
+    .intro-lead-in {
+        font-family: DroidSerif-Italic;
+        margin-bottom: rem(25);
+        font-size: rem(22);
+        line-height: rem(22);
+        @include media-breakpoint-up(md){
+            font-size: rem(40);
+            line-height: rem(40);
+        }
+    }
+    .intro-heading {
+        font-size: rem(50);
+        font-family: montserrat_Bold;
+        line-height: rem(50);
+        margin-bottom: rem(25);
+        @include media-breakpoint-up(md){
+            margin-bottom: rem(50);
+            font-size: rem(75);
+            line-height: rem(75);
+        }
+    }
+}
+.btn-primary {
+    background-color: $golden-yellow;
+    border-color: $golden-yellow;
+    &:focus {
+        box-shadow: 0 0 0 .2rem rgba(254,209,55,.5) !important;
+    }
+    &:hover, &:focus{
+        background-color: $golden-yellow-shadow !important;
+        border-color: $golden-yellow-shadow !important;
+    }
+}
+
+.btn{
+    font-family: montserrat_Bold;
+}
+
+.btn-xl {
+    font-size: rem(18);
+    padding: rem(20) rem(40);
+}
