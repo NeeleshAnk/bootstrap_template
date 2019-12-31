@@ -1,0 +1,205 @@
+@import "variable";
+/*
+* Base font awesome.
+*/
+/* ------- Font Awesome */
+/* -- Font Awesome Brands -- */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  src: url('../fonts/font_awesome/FontAwesome5BrandsRegular.eot');
+  src:
+    url('../fonts/font_awesome/FontAwesome5BrandsRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/font_awesome/FontAwesome5BrandsRegular.woff2') format('woff2'),
+    url('../fonts/font_awesome/FontAwesome5BrandsRegular.woff') format('woff'),
+    url('../fonts/font_awesome/FontAwesome5BrandsRegular.ttf') format('truetype'),
+    url('../fonts/font_awesome/FontAwesome5BrandsRegular.svg#FontAwesome5BrandsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* -- Font Awesome Light -- */
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  src: url('../fonts/font_awesome/FontAwesome5ProLight.eot');
+  src:
+    url('../fonts/font_awesome/FontAwesome5ProLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/font_awesome/FontAwesome5ProLight.woff2') format('woff2'),
+    url('../fonts/font_awesome/FontAwesome5ProLight.woff') format('woff'),
+    url('../fonts/font_awesome/FontAwesome5ProLight.ttf') format('truetype'),
+    url('../fonts/font_awesome/FontAwesome5ProLight.svg#FontAwesome5ProLight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+/* -- Font Awesome Regular -- */
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  src: url('../fonts/font_awesome/FontAwesome5ProRegular.eot');
+  src:
+    url('../fonts/font_awesome/FontAwesome5ProRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/font_awesome/FontAwesome5ProRegular.woff2') format('woff2'),
+    url('../fonts/font_awesome/FontAwesome5ProRegular.woff') format('woff'),
+    url('../fonts/font_awesome/FontAwesome5ProRegular.ttf') format('truetype'),
+    url('../fonts/font_awesome/FontAwesome5ProRegular.svg#FontAwesome5ProRegular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* -- Font Awesome Solid -- */
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  src: url('../fonts/font_awesome/FontAwesome5ProSolid.eot');
+  src:
+    url('../fonts/font_awesome/FontAwesome5ProSolid.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/font_awesome/FontAwesome5ProSolid.woff2') format('woff2'),
+    url('../fonts/font_awesome/FontAwesome5ProSolid.woff') format('woff'),
+    url('../fonts/font_awesome/FontAwesome5ProSolid.ttf') format('truetype'),
+    url('../fonts/font_awesome/FontAwesome5ProSolid.svg#FontAwesome5ProSolid') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fal {
+  font-weight: 300;
+}
+.far {
+  font-weight: 400;
+}
+.fa,
+.fas {
+  font-weight: 900;
+}
+.fa,
+.fal,
+.far,
+.fas {
+  font-family: $font-awesome;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+.fab {
+  font-family: $font-awesome-brand;
+}
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+.fa-xs {
+  font-size: 0.75em;
+}
+.fa-sm {
+  font-size: 0.875em;
+}
+.fa-1x {
+  font-size: 1em;
+}
+.fa-stack-2x {
+  font-size: 2em;
+}
+.fa-3x {
+  font-size: 3em;
+}
+.fa-4x {
+  font-size: 4em;
+}
+.fa-5x {
+  font-size: 5em;
+}
+.fa-6x {
+  font-size: 6em;
+}
+.fa-7x {
+  font-size: 7em;
+}
+.fa-8x {
+  font-size: 8em;
+}
+.fa-9x {
+  font-size: 9em;
+}
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2.5em;
+}
+
+.fa-4x {
+    font-size: 4em;
+}
+.fa-stack-1x{
+    line-height: inherit;
+}
+.fa-stack-1x, .fa-stack-2x {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.fa-inverse{
+    color: $white;
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-facebook:before {
+  content: "\f39e";
+}
+.fa-search:before {
+  content: "\f002";
+}
+.fa-plus:before {
+  content: "\f067";
+}
+.fa-minus:before {
+  content: "\f068";
+}
+.fa-arrow-down:before {
+  content: "\f063";
+}
+.fa-phone-volume:before {
+  content: "\f2a0";
+}
+.fa-circle:before{
+    content: "\f111";
+}
+.fa-shopping-cart:before{
+    content: "\f07a";
+}
+.fa-laptop:before{
+    content: "\f109";
+}
+.fa-lock:before{
+    content: "\f023";
+}
+i{
+    font-style: normal;
+}
