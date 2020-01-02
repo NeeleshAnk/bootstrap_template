@@ -1,5 +1,3 @@
-window.onscroll = function() {myFunction()};
-
 var header = document.getElementById('mainnav');
 
 function myFunction() {
@@ -9,6 +7,7 @@ function myFunction() {
         header.classList.remove("navbar-shrink");
     }
 }
+window.onscroll = function() {myFunction()};
 
 $(document).ready(function() {
     $('a[href*=#]').bind('click', function(e) {
@@ -30,6 +29,7 @@ $(document).ready(function() {
 $(window).scroll(function() {
     var scrollDistance = $(window).scrollTop();
     $('.page-section').each(function(i) {
+        $('.navbar-nav .nav-link').eq(i).removeClass('active');
         if ($(this).position().top <= scrollDistance) {
             $('.navbar-nav .nav-link.active').removeClass('active');
             $('.navbar-nav .nav-link').eq(i).addClass('active');
