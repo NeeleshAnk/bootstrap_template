@@ -5,19 +5,6 @@
 @import "typography";
 @import "variable";
 
-html {
-    scroll-behavior: smooth;
-}
-
-::selection {
-    background: $golden-yellow;
-    text-shadow: none;
-}
-
-body{
-    overflow-x: hidden;
-    font-family: RobotoSlab-Regular;
-}
 .navbar-brand{
     color: $golden-yellow !important;
     font-family: Kaushan;
@@ -244,12 +231,12 @@ body{
         position: relative;
         min-height: rem(50);
         margin-bottom: rem(50);
-        @include media-breakpoint-up(lg){
-            min-height: rem(150);
-        }
         @include media-breakpoint-up(md){
             min-height: rem(100);
             margin-bottom: rem(100);
+        }
+        @include media-breakpoint-up(lg){
+            min-height: rem(150);
         }
         @include media-breakpoint-up(xl){
             min-height: rem(170);
@@ -260,14 +247,14 @@ body{
             width: 100%;
             padding: 0 20px 0 100px;
             text-align: left;
-            @include media-breakpoint-up(lg){
-                padding: 0 20px 20px;
-            }
             @include media-breakpoint-up(md){
                 float: left;
                 width: 41%;
                 padding: 0 20px 20px 30px;
                 text-align: right;
+            }
+            @include media-breakpoint-up(lg){
+                padding: 0 20px 20px;
             }
             @include media-breakpoint-up(xl){
                 padding: 0 20px 20px 100px;
@@ -301,16 +288,16 @@ body{
                     margin-top: 40px;
                 }
             }
-            @include media-breakpoint-up(lg){
-                width: rem(150);
-                height: rem(150);
-                margin-left: rem(-75);
-            }
             @include media-breakpoint-up(md){
                 left: 50%;
                 width: rem(100);
                 height: rem(100);
                 margin-left: rem(-50);
+            }
+            @include media-breakpoint-up(lg){
+                width: rem(150);
+                height: rem(150);
+                margin-left: rem(-75);
             }
             @include media-breakpoint-up(xl){
                 width: rem(170);
@@ -323,13 +310,13 @@ body{
                 float: right;
                 padding: 0 20px 0 100px;
                 text-align: left;
-                @include media-breakpoint-up(lg){
-                    padding: 0 20px 20px;
-                }
                 @include media-breakpoint-up(md){
                     float: right;
                     padding: 0 30px 20px 20px;
                     text-align: left;
+                }
+                @include media-breakpoint-up(lg){
+                    padding: 0 20px 20px;
                 }
                 @include media-breakpoint-up(xl){
                     padding: 0 100px 20px 20px;
@@ -356,6 +343,7 @@ body{
 
 ul{
     &.social-buttons{
+        margin-bottom: 0;
         li {
             a {
                 @include fontSize(20);
@@ -405,5 +393,21 @@ ul{
                 box-shadow: none;
             }
         }
+    }
+}
+
+//** footer */
+.footer {
+    padding: 25px 0;
+    text-align: center;
+    .copyright{
+        font-family: montserrat_regular;
+    }
+    .copyright, .quicklinks{
+        font-size: 90%;
+        line-height: 40px;
+    }
+    .quicklinks{
+        margin-bottom: 0;
     }
 }
