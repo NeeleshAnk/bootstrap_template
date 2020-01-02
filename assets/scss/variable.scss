@@ -1,6 +1,30 @@
+@import "typography";
+@import "color";
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: $golden-yellow;
+    text-shadow: none;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: RobotoSlab-Regular;
+}
+
 h1, h2, h3, h4, h5, h6{
     margin-bottom: 0;
     font-family: montserrat_regular;
+}
+a{
+    color: $golden-yellow;
+    &:hover{
+        color: $golden-yellow;
+        text-decoration: none;
+    }
 }
 $font-awesome: 'Font Awesome 5 Pro';
 $font-awesome-brand: 'Font Awesome 5 Brands';
