@@ -189,7 +189,7 @@
         @include opacity(0);
         background: $golden-yellow;
         &:hover {
-            opacity: 1;
+            @include opacity(1);
         }
     }
     .portfolio-hover-content {
@@ -308,18 +308,16 @@
         &.timeline-inverted{
             &>.timeline-panel {
                 float: right;
-                padding: 0 20px 0 100px;
+                padding: 0 rem(20) 0 rem(100);
                 text-align: left;
                 @include media-breakpoint-up(md){
-                    float: right;
-                    padding: 0 30px 20px 20px;
-                    text-align: left;
+                    padding: 0 rem(30) rem(20) rem(20);
                 }
                 @include media-breakpoint-up(lg){
-                    padding: 0 20px 20px;
+                    padding: 0 rem(20) rem(20);
                 }
                 @include media-breakpoint-up(xl){
-                    padding: 0 100px 20px 20px;
+                    padding: 0 rem(100) rem(20) rem(20);
                 }
             }
         }
@@ -376,7 +374,7 @@ ul{
     .form-group {
         margin-bottom: rem(25);
         textarea {
-            padding: 20px;
+            padding: rem(20);
             &.form-control {
                 height: rem(248);
             }
@@ -398,16 +396,73 @@ ul{
 
 //** footer */
 .footer {
-    padding: 25px 0;
+    padding: rem(25) 0;
     text-align: center;
     .copyright{
         font-family: montserrat_regular;
     }
     .copyright, .quicklinks{
         font-size: 90%;
-        line-height: 40px;
+        line-height: rem(40);
     }
     .quicklinks{
         margin-bottom: 0;
+    }
+}
+
+//*** modal **/
+.portfolio-modal {
+    .modal-dialog {
+        margin: rem(16);
+        max-width: 100vw;
+    }
+    .modal-content {
+        padding: rem(100) 0;
+        text-align: center;
+        h2 {
+            @include fontSize(48);
+            margin-bottom: rem(15);
+            font-family: montserrat_Bold;
+        }
+        img {
+            margin-bottom: rem(30);
+        }
+        ul{
+            &.list-inline {
+                margin-bottom: rem(30);
+            }
+        }
+        p{
+            margin-bottom: rem(30);
+            &.item-intro {
+                @include fontSize(16);
+                font-family: DroidSerif-Italic;
+                margin: rem(20) 0 rem(30);
+            }
+        }
+        .close-modal {
+            @include absolute(top 25px right 25px);
+            width: rem(75);
+            height: rem(75);
+            cursor: pointer;
+            background-color: transparent;
+            &:hover{
+                @include opacity(.3);
+            }
+        }
+        .lr {
+            z-index: 1051;
+            width: rem(1);
+            height: rem(75);
+            margin-left: rem(35);
+            @include rotate(45);
+            background-color: $black-1;
+        }
+        .rl {
+            @extend .lr;
+            z-index: 1052;
+            margin-left: 0;
+            @include rotate(90);
+        }
     }
 }
